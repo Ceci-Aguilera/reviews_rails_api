@@ -41,6 +41,8 @@ Things you may want to cover:
 - amount
 
 ### Technology-Categories
+- belongs_to: category
+- belongs_to: technology
 
 ### Review
 - title
