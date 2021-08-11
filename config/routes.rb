@@ -13,6 +13,7 @@ Rails.application.routes.draw do
         get "categories", to: "categories#index"
         get "category/:id", to: "categories#show"
         get "technologies", to: "technologies#index"
+        get "technology/:id", to: "technologies#show"
     end
   end
 end
