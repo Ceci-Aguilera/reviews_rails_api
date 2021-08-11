@@ -5,7 +5,7 @@ class Api::V1::CategoriesController < ApplicationController
   before_action :load_category, only: [:show]
 
   def index
-    @categories = Category.all
+    @categories = Category.all.select(:title, :id)
     render json: {
       messages: "Category list loaded",
       is_success: true,
