@@ -14,6 +14,7 @@ Rails.application.routes.draw do
         get "category/:id", to: "categories#show"
         get "technologies", to: "technologies#index"
         get "technology/:id", to: "technologies#show"
+        post "reviews/create/:id", to: "reviews#create"
     end
   end
 end

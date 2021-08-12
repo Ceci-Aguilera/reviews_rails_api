@@ -15,10 +15,13 @@ class Api::V1::TechnologiesController < ApplicationController
 
 
   def show
+
+    @reviews = Review.where("technology_id = ?", @technology.id)
+
     render json: {
       messages: "technology loaded",
       is_success: true,
-      data: {technology: @technology}
+      data: {technology: @technology, reviews: @reviews}
     }, status: :ok
   end
 
